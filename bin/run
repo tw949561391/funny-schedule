@@ -1,0 +1,7 @@
+/**
+ * import
+ */
+const log4j = require('log4js');
+log4j.configure(require('../conf/log4js'));
+const start = require('../command');
+start();

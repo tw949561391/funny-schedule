@@ -1,0 +1,26 @@
+{
+  "name": "schedule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/run",
+    "server": "forever start -a -l  /var/log/node/funny-schedule/forever.log -o /var/log/node/funny-schedule/out.log -e /var/log/node/funny-schedule/err.log bin/run",
+    "server-stop": "forever stop bin/run",
+    "upload": "scp -pw Tristan201314 -r ./ root@miup.cc:/schedule/funny"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "generic-pool": "^3.1.7",
+    "log4js": "^2.3.3",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31",
+    "node-schedule": "^1.2.4",
+    "qiniu": "^7.0.8",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "uuid": "^3.1.0"
+  }
+}
